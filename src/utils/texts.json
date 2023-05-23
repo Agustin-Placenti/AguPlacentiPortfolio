@@ -1,0 +1,11 @@
+{
+    "PORTFOLIO": "portfolio",
+    "RESUME": "resume",
+    "NAV_LEFT_NAME": "Agustin Placenti - Game / Level designer",
+    "HEADER": {
+        "TITLE": "Agustin Placenti", 
+        "SUBTITLE": "Game / Level designer",
+        "DESCRIPTION": "Hello! My name is Agustin and I am currently working as a level designer at Remedy Entertainment. I hold an MSc degree in Applied Cognitive Psychology as well as a BSc in International Game Architecture and Design.",
+        "DESCRIPTION_2": "Below you can find my portfolio highlighting some of my game development work."
+    }
+}

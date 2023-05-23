@@ -1,0 +1,35 @@
+.video-with-description {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-background {
+    background-color: #1e1e1e;
+}
+ 
+.description-container,
+.video-container {
+    width: 50%;
+    padding: 20px;
+    color: #a1a1a1;
+}
+
+.video-container :first-child {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    min-height: 300px;
+	animation: fadeIn 3s forwards;
+}
+
+@media (max-width: 768px) {
+    .video-with-description {
+        display: block;
+    }
+
+    .video-container,
+    .description-container {
+        width: auto;
+    }
+}
