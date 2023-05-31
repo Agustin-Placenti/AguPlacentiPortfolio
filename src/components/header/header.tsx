@@ -1,3 +1,5 @@
+import "./header.css"
+
 interface HeaderData {
   title: string;
   subtitle: string;

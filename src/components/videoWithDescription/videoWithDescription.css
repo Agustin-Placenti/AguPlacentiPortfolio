@@ -1,3 +1,5 @@
+.divider-container,
+.video-section-title,
 .video-with-description {
     display: flex;
     max-width: 1200px;
@@ -7,8 +9,18 @@
 .video-background {
     background-color: #1e1e1e;
 }
+
+.video-section-title {
+    padding: 40px 20px;
+    color: rgb(230, 230, 230);
+    font-size: 2.7rem;
+    font-weight: 700;
+    font-family: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
  
-.description-container,
+.full-description-container,
 .video-container {
     width: 50%;
     padding: 20px;
@@ -19,8 +31,29 @@
     width: 100%;
     box-sizing: border-box;
     border: none;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
     min-height: 300px;
 	animation: fadeIn 3s forwards;
+}
+
+.divider {
+    box-sizing: border-box;
+    margin: 0 20px;
+    background-color: rgba(0,0,0,0.13);
+    width: 100%;
+    border: none;
+    height: 1px;
+}
+
+.subtitle-container {
+    font-size: 175%;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description-container {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -29,7 +62,11 @@
     }
 
     .video-container,
-    .description-container {
+    .full-description-container {
         width: auto;
+    }
+
+    .video-section-title {
+        font-size: 24px;
     }
 }

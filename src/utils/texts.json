@@ -7,5 +7,24 @@
         "SUBTITLE": "Game / Level designer",
         "DESCRIPTION": "Hello! My name is Agustin and I am currently working as a level designer at Remedy Entertainment. I hold an MSc degree in Applied Cognitive Psychology as well as a BSc in International Game Architecture and Design.",
         "DESCRIPTION_2": "Below you can find my portfolio highlighting some of my game development work."
-    }
+    },
+    "VIDEO_WITH_DESCRIPTION": {
+        "TITLE": "Experiencie",
+        "SUBTITLE1": "Control",
+        "DESCRIPTION1": "From developer Remedy Entertainment, this supernatural 3rd person action-adventure will challenge you to master the combination of supernatural abilities, modifiable loadouts and reactive environments while fighting through a deep and unpredictable world.",
+        "GENRE": "Genre:",
+        "ENGINE": "Engine:",
+        "PLATFORMS": "Platforms:",
+        "GENRE1": "Third-Person Shooter, Action-Adventure",
+        "ENGINE1": "Northlight",
+        "PLATFORMS1": "PC, Playstation 4, Xbox One",
+        "SUBTITLE2": "Arboreal",
+        "DESCRIPTION2": "Arboreal is a top-down, open-world farming and adventuring game. Players can choose to tend to their Orchard, explore the World and test their skills in its various hidden dungeons, or cultivate relationships with its NPC inhabitants.",
+        "GENRE2": "Action-Adventure, Farm Simulation",
+        "ENGINE2": "Unreal Engine 4",
+        "PLATFORMS2": "PC (Steam)",
+        "VIDEO_INFO": "Trailer by Remedy Entertainment."
+    },
+    "FOOTER_TEXT": "Proudly powered by React",
+    "DOWNLOAD_RESUME": "Download resume"
 }

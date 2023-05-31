@@ -1,4 +1,4 @@
-import constants from "../../utils/texts.json";
+import texts from "../../utils/texts.json";
 import "./nav.css";
 import { useStore } from "../../store/store";
 import { PORTFOLIO, RESUME } from "../../utils/consts";
@@ -21,10 +21,6 @@ export default function Nav() {
     };
   }, []);
 
-  const changeUrl = (url: string) => {
-    window.location.pathname = url;
-  };
-
   return (
     <div
       className={`navbar ${active !== PORTFOLIO ? "layout" : ""} ${
@@ -32,24 +28,22 @@ export default function Nav() {
       }`}
     >
       <span className={"left-nav"}>
-        <a className={"link name"} onClick={() => changeUrl("./")} tabIndex={0}>
-          {constants.NAV_LEFT_NAME}
+        <a className={"link name"} href={PORTFOLIO}>
+          {texts.NAV_LEFT_NAME}
         </a>
       </span>
       <span className={"right-nav"}>
         <a
           className={`link ${active === PORTFOLIO ? "active" : ""}`}
-          onClick={() => changeUrl("./")}
-          tabIndex={0}
+          href={PORTFOLIO}
         >
-          {constants.PORTFOLIO}
+          {texts.PORTFOLIO}
         </a>
         <a
           className={`link ${active === RESUME ? "active" : ""}`}
-          onClick={() => changeUrl("resume")}
-          tabIndex={0}
+          href={RESUME}
         >
-          {constants.RESUME}
+          {texts.RESUME}
         </a>
         <MenuIcon className={"menu-icon"} tabIndex={0}>
           asd
