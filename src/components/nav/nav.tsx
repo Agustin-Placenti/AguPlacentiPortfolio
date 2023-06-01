@@ -5,7 +5,11 @@ import { PORTFOLIO, RESUME } from "../../utils/consts";
 import { useEffect, useState } from "react";
 import MenuIcon from "../../components/menuIcon";
 
-export default function Nav() {
+type NavProps = {
+  openMenu: boolean
+}
+
+export default function Nav({openMenu}: NavProps) {
   const active = useStore((state) => state.active);
   const [opacity, setOpacity] = useState(false);
 
@@ -45,9 +49,7 @@ export default function Nav() {
         >
           {texts.RESUME}
         </a>
-        <MenuIcon className={"menu-icon"} tabIndex={0}>
-          asd
-        </MenuIcon>
+        <MenuIcon className={"menu-icon"} tabIndex={0} openMenu={openMenu} />
       </span>
     </div>
   );

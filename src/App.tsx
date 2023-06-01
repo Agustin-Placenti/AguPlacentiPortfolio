@@ -9,7 +9,8 @@ import Dashboard from "../src/pages/dashboard";
 import Nav from "../src/components/nav";
 import Footer from "../src/components/footer";
 import { useStore } from "./store/store";
-import { PORTFOLIO } from "./utils/consts";
+import { PORTFOLIO, RESUME } from "./utils/consts";
+import texts from "./utils/texts.json";
 import "./App.css";
 import { useEffect } from "react";
 
@@ -25,18 +26,37 @@ const router = createBrowserRouter(
 function App() {
   const active = useStore((state) => state.active);
   const setActive = useStore((state) => state.setActive);
+  const openMenu = useStore((state) => state.openMenu);
+  const setOpenMenu = useStore((state) => state.setOpenMenu);
 
   useEffect(() => {
     setActive(window.location.pathname);
-  }, [setActive]);
+    setOpenMenu(false);
+  }, []);
 
   return (
     <>
       <div className={active === PORTFOLIO ? "portfolio-layout" : ""}>
-        <Nav />
+        <Nav openMenu={openMenu}/>
       </div>
       <RouterProvider router={router} />
       <Footer />
+      {openMenu && (
+        <div className="open-menu">
+          <a
+            href={PORTFOLIO}
+            className={`open-menu-item ${active === PORTFOLIO ? "active" : ""}`}
+          >
+            {texts.PORTFOLIO}
+          </a>
+          <a
+            className={`open-menu-item ${active === RESUME ? "active" : ""}`}
+            href={RESUME}
+          >
+            {texts.RESUME}
+          </a>
+        </div>
+      )}
     </>
   );
 }

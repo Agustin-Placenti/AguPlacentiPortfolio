@@ -6,3 +6,49 @@
     background-color: transparent;
     background-size: cover;
 }
+
+.open-menu {
+    position: fixed;
+    transition: 4s;
+    top: 0;
+    background: white;
+    height: 100%;
+    width: 100%;
+    margin-top: 3.5rem;
+}
+
+.open-menu-item {
+    display:block;
+    cursor: pointer;
+    color: inherit;
+    font-size: 12px;
+    background-color: white;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.open-menu-item:hover {
+    color: inherit;
+    opacity: 0.6;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.open-menu .active {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+@media (min-width: 425px) {
+    .open-menu-item {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .open-menu {
+        display: none;
+    }
+}

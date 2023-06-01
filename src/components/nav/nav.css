@@ -11,6 +11,7 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    max-height: 3.5rem;
 }
 
 .layout {
@@ -43,7 +44,7 @@
     transition: 0.3s;
 }
 
-.active {
+.navbar .active {
     border: 1px solid white;
 }
 

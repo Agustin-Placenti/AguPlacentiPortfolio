@@ -4,7 +4,9 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 interface State {
     active: string,
-    setActive: (item: string) => void
+    setActive: (item: string) => void,
+    openMenu: boolean,
+    setOpenMenu: (value: boolean) => void
 }
 
 export const useStore = create<State>()(
@@ -12,6 +14,8 @@ export const useStore = create<State>()(
         (set) => ({
             active: PORTFOLIO,
             setActive: (item: string) => set({ active: item }),
+            openMenu: false,
+            setOpenMenu: (value: boolean) => set({ openMenu: value }),
         }),
         {
             name: 'storage',
