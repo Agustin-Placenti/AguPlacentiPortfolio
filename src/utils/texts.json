@@ -26,5 +26,8 @@
         "VIDEO_INFO": "Trailer by Remedy Entertainment."
     },
     "FOOTER_TEXT": "Proudly powered by React",
-    "DOWNLOAD_RESUME": "Download resume"
+    "DOWNLOAD_RESUME": "Download resume",
+    "ERRORS": {
+        "TRY_LATER": "Please try again later"
+    }
 }

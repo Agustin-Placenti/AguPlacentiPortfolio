@@ -6,9 +6,9 @@
 
 .footer-text {
     display: flex;
-    padding: 5px;
+    padding: 0.3rem;
     justify-content: end;
     align-items: end;
     height: 70%;
-    font-size: 14px;
+    font-size: 0.9rem;
 }

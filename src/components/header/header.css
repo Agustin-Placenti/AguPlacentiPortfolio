@@ -20,13 +20,13 @@
     padding: 1rem 0;
     font-weight: 600;
     line-height: 1rem;
-    font-size: 17px;
+    font-size: 1rem;
     letter-spacing: 2px;
 }
 
 .header-side-content {
     width: 30%;
-    padding: 0 20px;
+    padding: 0 1.3rem;
 }
 
 .header-icons {
@@ -45,6 +45,6 @@
     }
 
     .header-subtitle {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

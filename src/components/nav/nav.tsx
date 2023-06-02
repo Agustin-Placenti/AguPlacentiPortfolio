@@ -4,18 +4,20 @@ import { useStore } from "../../store/store";
 import { PORTFOLIO, RESUME } from "../../utils/consts";
 import { useEffect, useState } from "react";
 import MenuIcon from "../../components/menuIcon";
+import LinkWithActive from "../../components/linkWithActive";
+import type { MenuStateProps } from "../../store/store";
 
 type NavProps = {
-  openMenu: boolean
-}
+  menuState: MenuStateProps;
+};
 
-export default function Nav({openMenu}: NavProps) {
+export default function Nav({ menuState }: NavProps) {
   const active = useStore((state) => state.active);
-  const [opacity, setOpacity] = useState(false);
+  const [offsetVertical, setOffsetVertical] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setOpacity(window.pageYOffset !== 0);
+      setOffsetVertical(window.pageYOffset !== 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +30,7 @@ export default function Nav({openMenu}: NavProps) {
   return (
     <div
       className={`navbar ${active !== PORTFOLIO ? "layout" : ""} ${
-        opacity ? "opacity" : ""
+        offsetVertical ? "opacity" : ""
       }`}
     >
       <span className={"left-nav"}>
@@ -37,19 +39,13 @@ export default function Nav({openMenu}: NavProps) {
         </a>
       </span>
       <span className={"right-nav"}>
-        <a
-          className={`link ${active === PORTFOLIO ? "active" : ""}`}
-          href={PORTFOLIO}
-        >
-          {texts.PORTFOLIO}
-        </a>
-        <a
-          className={`link ${active === RESUME ? "active" : ""}`}
-          href={RESUME}
-        >
-          {texts.RESUME}
-        </a>
-        <MenuIcon className={"menu-icon"} tabIndex={0} openMenu={openMenu} />
+        <LinkWithActive
+          url={PORTFOLIO}
+          text={texts.PORTFOLIO}
+          activeItem={active}
+        />
+        <LinkWithActive url={RESUME} text={texts.RESUME} activeItem={active} />
+        <MenuIcon className={"menu-icon"} tabIndex={0} menuState={menuState} />
       </span>
     </div>
   );

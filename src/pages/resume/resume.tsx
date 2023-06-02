@@ -1,34 +1,15 @@
 import Spacer from "../../components/spacer";
 import texts from "../../utils/texts.json";
-import { PDF_DOWNLOAD_URL } from "../../utils/consts";
+import getDownloadPdf from "../../services/getDownloadPdf";
 import "./resume.css";
+import { useState } from "react";
 
 export default function resume() {
-  const handleResumeClick = () => {
-    // if I had a pdf stored in a real api just use that instead of this one
-    fetch(PDF_DOWNLOAD_URL, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/pdf",
-      },
-    })
-      .then((response) => response.blob())
-      .then((blob) => {
-        const file = new Blob([blob], { type: "application/pdf" });
-        const url = window.URL.createObjectURL(file);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "resume.pdf";
-        a.click();
+  const errorTryLaterMsg = texts.ERRORS.TRY_LATER;
+  const [errorMsg, setErrorMsg] = useState("");
 
-        setTimeout(() => {
-          window.URL.revokeObjectURL(url);
-          a.remove();
-        }, 1000);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+  const handleResumeClick = () => {
+    getDownloadPdf().catch((e) => setErrorMsg(e.message));
   };
 
   return (
@@ -39,6 +20,12 @@ export default function resume() {
           <button className="resume-button" onClick={handleResumeClick}>
             {texts.DOWNLOAD_RESUME}
           </button>
+          {errorMsg && (
+            <>
+              <div className="resume-download-error"> {errorMsg} </div>
+              <div className="resume-download-error"> {errorTryLaterMsg} </div>
+            </>
+          )}
         </div>
       </div>
     </>

@@ -12,10 +12,22 @@
     padding: 1rem 2rem;
     border: 1px solid black;
     border-radius: unset;
-    font-size: 14px;
+    font-size: 0.9rem;
     background-color: white;
 }
 
 .resume-button:hover {
     background-color: var(--bg-secondary-color);
+}
+
+.resume-download-error {
+    color: red;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.resume-download-success {
+    color: green;
+    font-size: 1.3rem;
+    margin-top: 1rem;
 }

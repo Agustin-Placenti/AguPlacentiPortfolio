@@ -11,7 +11,7 @@
 }
 
 .video-section-title {
-    padding: 40px 20px;
+    padding: 2.6rem 1.3rem;
     color: rgb(230, 230, 230);
     font-size: 2.7rem;
     font-weight: 700;
@@ -23,7 +23,7 @@
 .full-description-container,
 .video-container {
     width: 50%;
-    padding: 20px;
+    padding: 1.3rem;
     color: #a1a1a1;
 }
 
@@ -39,7 +39,7 @@
 
 .divider {
     box-sizing: border-box;
-    margin: 0 20px;
+    margin: 0 1.3rem;
     background-color: rgba(0,0,0,0.13);
     width: 100%;
     border: none;
@@ -49,11 +49,11 @@
 .subtitle-container {
     font-size: 175%;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 1.3rem;
 }
 
 .description-container {
-    margin-bottom: 20px;
+    margin-bottom: 1.3rem;
 }
 
 @media (max-width: 768px) {

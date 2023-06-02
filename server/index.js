@@ -1,9 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import path from "path";
 dotenv.config();
 const app = express();
-import { fileURLToPath } from "url";
 
 app.use((req, res, next) => {
   res.set("Access-Control-Allow-Credentials", "true");

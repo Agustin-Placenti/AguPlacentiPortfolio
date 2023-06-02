@@ -1,12 +1,13 @@
 import { create } from "zustand";
 import { PORTFOLIO } from "../utils/consts";
 import { createJSONStorage, persist } from "zustand/middleware";
+export type MenuStateProps = 'open' | 'closed' | 'loading';
 
 interface State {
     active: string,
     setActive: (item: string) => void,
-    openMenu: boolean,
-    setOpenMenu: (value: boolean) => void
+    menuState: MenuStateProps,
+    setMenuState: (value: MenuStateProps) => void
 }
 
 export const useStore = create<State>()(
@@ -14,8 +15,8 @@ export const useStore = create<State>()(
         (set) => ({
             active: PORTFOLIO,
             setActive: (item: string) => set({ active: item }),
-            openMenu: false,
-            setOpenMenu: (value: boolean) => set({ openMenu: value }),
+            menuState: 'loading',
+            setMenuState: (value: MenuStateProps) => set({ menuState: value }),
         }),
         {
             name: 'storage',

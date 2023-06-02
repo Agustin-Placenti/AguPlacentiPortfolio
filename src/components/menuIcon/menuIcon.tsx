@@ -1,19 +1,22 @@
-import { useStore } from "../../store/store";
+import { useStore, MenuStateProps } from "../../store/store";
+import { OPEN, CLOSED } from "../../utils/consts";
 
 interface MenuProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
-  openMenu: boolean;
+  menuState: MenuStateProps;
 }
 
 export default function MenuIcon(props: MenuProps) {
-  const openMenu = useStore((state) => state.openMenu);
-  const setOpenMenu = useStore((state) => state.setOpenMenu);
+  const menuState = useStore((state) => state.menuState);
+  const setMenuState = useStore((state) => state.setMenuState);
   return (
     <>
       <link
-        className={`${props.openMenu ? "fa fa-times" : "fa fa-bars"} ${props?.className}`}
+        className={`${
+          props.menuState === OPEN ? "fa fa-times" : "fa fa-bars"
+        } ${props?.className}`}
         tabIndex={props?.tabIndex}
-        onClick={() => setOpenMenu(!!!openMenu)}
+        onClick={() => setMenuState(menuState === OPEN ? CLOSED : OPEN)}
       />
     </>
   );

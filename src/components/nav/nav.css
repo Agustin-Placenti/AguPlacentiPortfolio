@@ -12,6 +12,7 @@
     max-width: 100%;
     box-sizing: border-box;
     max-height: 3.5rem;
+    overflow: hidden;
 }
 
 .layout {
@@ -23,33 +24,17 @@
     opacity: 1;
 }
 
-.navbar .link {
-    cursor: pointer;
-    color: inherit;
-    font-weight: 700;
-    text-transform: uppercase;
-    animation: 1s ease-out 0s 1 fadeIn;    
-    padding: 10px 20px;
-    margin: 0 5px;
-}
-
 .name {
     font-weight: 550 !important;
 }
 
-.menu-icon:hover,
-.navbar .link:hover {
+.menu-icon:hover {
     color: inherit;
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.navbar .active {
-    border: 1px solid white;
-}
-
 .active:focus {
-    border-left-color: black;
     outline: none;
     padding: 12px 22px;
 }
