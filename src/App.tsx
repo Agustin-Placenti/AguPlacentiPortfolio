@@ -4,10 +4,10 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Resume from "../src/pages/resume";
-import Dashboard from "../src/pages/dashboard";
-import Nav from "../src/components/nav";
-import Footer from "../src/components/footer";
+import Resume from "./pages/resume";
+import Dashboard from "./pages/dashboard";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
 import { useStore } from "./store/store";
 import { PORTFOLIO, RESUME, LOADING } from "./utils/consts";
 import texts from "./utils/texts.json";

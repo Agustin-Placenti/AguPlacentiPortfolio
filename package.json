@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.3.0",
+    "firebase": "^9.22.1",
     "install": "^0.13.0",
     "npm": "^9.6.6",
+    "psql": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.11.1",
