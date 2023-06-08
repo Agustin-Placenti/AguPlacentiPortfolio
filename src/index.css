@@ -45,6 +45,7 @@ button {
   transition: border-color 0.25s;
 }
 
+/* TODO DARK MODE with #1e1e1e */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

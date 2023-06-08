@@ -1,5 +1,6 @@
 import { useStore, MenuStateProps } from "store/store";
 import { OPEN, CLOSED } from "utils/consts";
+import "./menuIcon.css"
 
 interface MenuProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
@@ -7,7 +8,6 @@ interface MenuProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function MenuIcon(props: MenuProps) {
-  const menuState = useStore((state) => state.menuState);
   const setMenuState = useStore((state) => state.setMenuState);
   return (
     <>
@@ -16,7 +16,7 @@ export default function MenuIcon(props: MenuProps) {
           props.menuState === OPEN ? "fa fa-times" : "fa fa-bars"
         } ${props?.className}`}
         tabIndex={props?.tabIndex}
-        onClick={() => setMenuState(menuState === OPEN ? CLOSED : OPEN)}
+        onClick={() => setMenuState(props.menuState === OPEN ? CLOSED : OPEN)}
       />
     </>
   );

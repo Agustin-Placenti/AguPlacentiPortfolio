@@ -1,0 +1,24 @@
+.closed,
+.open {
+    position: fixed;
+    top: 0;
+    background: white;
+    height: 100%;
+    width: 100%;
+    margin-top: 3.5rem;
+    animation: 0.5s ease-out 0s 1 expandToBottom;
+}
+
+.closed {
+    animation: 0.5s ease-out 0s 1 shrinkToTop;
+}
+
+.open .active {
+    background-color: rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+    .open {
+        display: none;
+    }
+}

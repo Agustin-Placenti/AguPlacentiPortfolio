@@ -1,0 +1,28 @@
+.mobile-link {
+    display:block;
+    cursor: pointer;
+    color: inherit;
+    font-size: 0.8rem;
+    background-color: white;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mobile-link:hover {
+    color: inherit;
+    opacity: 0.6;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.remove {
+    display: none;
+}
+
+@media (min-width: 425px) {
+    .mobile-link {
+        font-size: 0.9rem;
+    }
+}

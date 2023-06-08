@@ -1,4 +1,4 @@
-.link {
+.desktop-link {
     color: inherit;
     font-weight: 700;
     text-transform: uppercase;
@@ -7,12 +7,12 @@
     margin: 0 0.3rem;
 }
 
-.link:hover {
+.desktop-link:hover {
     color: inherit;
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.link.active {
+.desktop-link.active {
     border: 1px solid white;
 }
