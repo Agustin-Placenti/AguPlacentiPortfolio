@@ -1,15 +1,15 @@
-import Spacer from "../../components/spacer";
-import texts from "../../utils/texts.json";
-import getDownloadPdf from "../../services/getDownloadPdf";
+import Spacer from "components/spacer";
+import texts from "utils/texts.json";
+import getDownloadPdf from "services/getDownloadPdf";
 import "./resume.css";
 import { useState } from "react";
 
-export default function resume() {
+export default function Resume() {
   const errorTryLaterMsg = texts.ERRORS.TRY_LATER;
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleResumeClick = () => {
-    getDownloadPdf().catch((e) => setErrorMsg(e.message));
+    getDownloadPdf().catch((e: Error) => setErrorMsg(e.message));
   };
 
   return (

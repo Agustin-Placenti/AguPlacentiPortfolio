@@ -1,4 +1,4 @@
-import { PDF_DOWNLOAD_URL } from "../utils/consts";
+import { PDF_DOWNLOAD_URL } from "utils/consts";
 
 export default function getDownloadPdf() {
   return new Promise((resolve, reject) => {

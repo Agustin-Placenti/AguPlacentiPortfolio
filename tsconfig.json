@@ -4,6 +4,13 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "services/*": ["services/*"],
+      "utils/*": ["utils/*"],
+      "components/*": ["components/*"],
+      "store/*": ["store/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",

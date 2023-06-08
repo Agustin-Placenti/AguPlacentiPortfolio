@@ -32,9 +32,10 @@ function App() {
   useEffect(() => {
     setActive(window.location.pathname);
     setMenuState(LOADING);
-  }, []);
+  }, [setActive, setMenuState]);
 
   //TODO move this function and its jsx element to another file
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleAnimationEnd(event: any) {
     if (event.animationName === "shrinkToTop") {
       event.target.classList.add("remove");

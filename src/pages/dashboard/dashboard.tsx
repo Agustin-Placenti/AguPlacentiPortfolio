@@ -1,10 +1,10 @@
-import Header from "../../components/header";
-import Spacer from "../../components/spacer";
-import VideoWithDescription from "../../components/videoWithDescription/videoWithDescription";
-import { useStore } from "../../store/store";
-import { PORTFOLIO } from "../../utils/consts";
-import texts from "../../utils/texts.json";
-import { video1, video2 } from "../../utils/videos";
+import Header from "components/header";
+import Spacer from "components/spacer";
+import VideoWithDescription from "components/videoWithDescription/videoWithDescription";
+import { useStore } from "store/store";
+import { PORTFOLIO } from "utils/consts";
+import texts from "utils/texts.json";
+import { video1, video2 } from "utils/videos";
 import "./dashboard.css";
 
 export default function Dashboard() {

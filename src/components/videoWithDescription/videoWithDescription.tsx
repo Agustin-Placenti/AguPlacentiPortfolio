@@ -1,4 +1,4 @@
-import texts from "../../utils/texts.json";
+import texts from "utils/texts.json";
 import "./videoWithDescription.css";
 
 export interface VideoWithDescriptionProps {

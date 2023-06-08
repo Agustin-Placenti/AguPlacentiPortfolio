@@ -1,11 +1,11 @@
-import texts from "../../utils/texts.json";
+import texts from "utils/texts.json";
 import "./nav.css";
-import { useStore } from "../../store/store";
-import { PORTFOLIO, RESUME } from "../../utils/consts";
+import { useStore } from "store/store";
+import { PORTFOLIO, RESUME } from "utils/consts";
 import { useEffect, useState } from "react";
-import MenuIcon from "../../components/menuIcon";
-import LinkWithActive from "../../components/linkWithActive";
-import type { MenuStateProps } from "../../store/store";
+import MenuIcon from "components/menuIcon";
+import LinkWithActive from "components/linkWithActive";
+import type { MenuStateProps } from "store/store";
 
 type NavProps = {
   menuState: MenuStateProps;

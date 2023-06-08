@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PORTFOLIO } from "../utils/consts";
+import { PORTFOLIO } from "utils/consts";
 import { createJSONStorage, persist } from "zustand/middleware";
 export type MenuStateProps = 'open' | 'closed' | 'loading';
 

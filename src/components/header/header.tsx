@@ -1,4 +1,4 @@
-import "./header.css"
+import "./header.css";
 
 interface HeaderData {
   title: string;
@@ -13,7 +13,7 @@ type HeaderProps = {
   headerData: HeaderData;
 };
 
-export default function Header({headerData}: HeaderProps) {
+export default function Header({ headerData }: HeaderProps) {
   return (
     <table className={"header"}>
       <tbody>
@@ -22,12 +22,8 @@ export default function Header({headerData}: HeaderProps) {
           <td className="header-main-content">
             <div className="header-title">{headerData.title}</div>
             <div className="header-subtitle">{headerData.subtitle}</div>
-            <div className="header-description">
-              {headerData.description1}
-            </div>
-            <div className="header-description">
-              {headerData.description2}
-            </div>
+            <div className="header-description">{headerData.description1}</div>
+            <div className="header-description">{headerData.description2}</div>
             <div className="header-icons">
               <a
                 className="far fa-envelope mail-icon"

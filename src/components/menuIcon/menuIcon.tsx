@@ -1,5 +1,5 @@
-import { useStore, MenuStateProps } from "../../store/store";
-import { OPEN, CLOSED } from "../../utils/consts";
+import { useStore, MenuStateProps } from "store/store";
+import { OPEN, CLOSED } from "utils/consts";
 
 interface MenuProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;

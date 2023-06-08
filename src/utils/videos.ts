@@ -1,5 +1,5 @@
 import texts from "./texts.json";
-import { VideoWithDescriptionProps } from "../components/videoWithDescription"
+import { VideoWithDescriptionProps } from "components/videoWithDescription"
 
 const videoUrl = "//www.youtube.com/embed/uvKAHpIvbl8?wmode=opaque";
 const videoUrl2 = "//www.youtube.com/embed/dKFy4tx8av0?wmode=opaque";
