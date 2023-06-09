@@ -7,6 +7,7 @@ import MenuIcon from "./menuIcon/menuIcon";
 import NavbarLink from "./navbarLink/navbarLink";
 import { navbarPages } from "utils/navbarPages";
 import type { MenuStateProps } from "store/store";
+import DarkModeButton from "./darkModeButton/darkModeButton";
 
 type NavProps = {
   menuState: MenuStateProps;
@@ -38,6 +39,7 @@ export default function Nav({ menuState }: NavProps) {
         <a className={"desktop-link name"} href={PORTFOLIO}>
           {texts.NAV_LEFT_NAME}
         </a>
+        <DarkModeButton />
       </span>
       <span className={"right-nav"}>
         {navbarPages.map((page) => <NavbarLink url={page.url} text={page.text} />)}

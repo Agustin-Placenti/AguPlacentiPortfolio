@@ -25,6 +25,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  const darkMode = useStore((state) => state.darkMode);
   const setActive = useStore((state) => state.setActive);
   const menuState = useStore((state) => state.menuState);
   const setMenuState = useStore((state) => state.setMenuState);
@@ -37,8 +38,10 @@ function App() {
   return (
     <>
       <Nav menuState={menuState} />
-      <RouterProvider router={router} />
-      <Footer />
+      <div className={darkMode ? "dark-bg" : "light-bg"}>
+        <RouterProvider router={router} />
+        <Footer />
+      </div>
       {menuState !== LOADING && <MobileMenu />}
       <ScrollButton />
     </>

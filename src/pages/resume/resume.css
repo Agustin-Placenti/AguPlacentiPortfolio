@@ -17,7 +17,8 @@
 }
 
 .resume-button:hover {
-    background-color: var(--bg-secondary-color);
+    background-color: #999;
+    transition: 1s;
 }
 
 .resume-download-error {

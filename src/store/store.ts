@@ -7,7 +7,9 @@ interface State {
     active: string,
     setActive: (item: string) => void,
     menuState: MenuStateProps,
-    setMenuState: (value: MenuStateProps) => void
+    setMenuState: (value: MenuStateProps) => void,
+    darkMode: boolean,
+    setDarkMode: (value: boolean) => void
 }
 
 export const useStore = create<State>()(
@@ -17,6 +19,8 @@ export const useStore = create<State>()(
             setActive: (item: string) => set({ active: item }),
             menuState: 'loading',
             setMenuState: (value: MenuStateProps) => set({ menuState: value }),
+            darkMode: true,
+            setDarkMode: (value: boolean) => set({ darkMode: value})
         }),
         {
             name: 'storage',

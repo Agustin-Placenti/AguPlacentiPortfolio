@@ -6,3 +6,19 @@
     background-color: transparent;
     background-size: cover;
 }
+
+.dark-bg {
+    background-color: var(--bg-color);
+}
+
+.light-bg .footer,
+.dark-bg .footer,
+.dark-bg,
+.light-bg {
+    transition: 1s;
+}
+
+.dark-bg .footer {
+    background-color: var(--bg-color);
+    color: white
+}

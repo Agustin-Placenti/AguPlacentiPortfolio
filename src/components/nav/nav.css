@@ -24,6 +24,13 @@
     opacity: 1;
 }
 
+.left-nav {
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    max-height: inherit;
+}
+
 .name {
     font-weight: 550 !important;
 }
