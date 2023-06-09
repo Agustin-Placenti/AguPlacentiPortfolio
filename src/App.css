@@ -17,8 +17,3 @@
 .light-bg {
     transition: 1s;
 }
-
-.dark-bg .footer {
-    background-color: var(--bg-color);
-    color: white
-}
