@@ -11,8 +11,9 @@ import Footer from "components/footer";
 import { useStore } from "store/store";
 import { PORTFOLIO, RESUME, LOADING } from "utils/consts";
 import MobileMenu from "components/mobileMenu";
-import "./App.css";
 import { useEffect } from "react";
+import ScrollButton from "components/scrollButton/scrollButton";
+import "./App.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +40,7 @@ function App() {
       <RouterProvider router={router} />
       <Footer />
       {menuState !== LOADING && <MobileMenu />}
+      <ScrollButton />
     </>
   );
 }
