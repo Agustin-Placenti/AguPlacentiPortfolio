@@ -1,12 +1,12 @@
 {
     "PORTFOLIO": "portfolio",
     "RESUME": "resume",
-    "NAV_LEFT_NAME": "Agustin Placenti - Game / Level designer",
+    "NAV_LEFT_NAME": "Agustin Placenti - React JS Developer",
     "HEADER": {
-        "TITLE": "Agustin Placenti", 
-        "SUBTITLE": "Game / Level designer",
-        "DESCRIPTION": "Hello! My name is Agustin and I am currently working as a level designer at Remedy Entertainment. I hold an MSc degree in Applied Cognitive Psychology as well as a BSc in International Game Architecture and Design.",
-        "DESCRIPTION_2": "Below you can find my portfolio highlighting some of my game development work."
+        "TITLE": "Agustin Placenti",
+        "SUBTITLE": "React JS Developer",
+        "DESCRIPTION": "Hello, my name is Agustin Placenti. I'm a react developer with +6 years of professional experience with javascript",
+        "DESCRIPTION_2": "I've done many projects with Node JS, Next JS, Vite & Svelte frameworks, using react libraries such as react-router, typescript, react-testing-library, hooks."
     },
     "VIDEO_WITH_DESCRIPTION": {
         "TITLE": "Experiencie",
@@ -29,5 +29,6 @@
     "DOWNLOAD_RESUME": "Download resume",
     "ERRORS": {
         "TRY_LATER": "Please try again later"
-    }
+    },
+    "SKILLS": "Skills"
 }

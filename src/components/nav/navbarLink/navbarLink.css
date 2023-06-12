@@ -1,6 +1,6 @@
 .desktop-link {
     color: inherit;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
     animation: 1s ease-out 0s 1 fadeIn;    
     padding: 0.6rem 1.3rem;

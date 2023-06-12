@@ -17,3 +17,8 @@
 .light-bg {
     transition: 1s;
 }
+
+.light-bg {
+    background-color: white;
+    color: black;
+}
