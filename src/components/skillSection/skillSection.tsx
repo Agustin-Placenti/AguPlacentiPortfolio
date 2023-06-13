@@ -8,12 +8,13 @@ const SkillSection = () => {
     <>
       <div className="skills-title"> {texts.SKILLS} </div>
       <div className="skills-container">
-        {skills.map((skill: skillProps) => (
+        {skills.map((skill: skillProps, index: number) => (
           <SkillBox
             name={skill.name}
             iconClass={skill.iconClass}
             percentage={skill.percentage}
             iconUrl={skill.iconUrl}
+            key={index}
           />
         ))}
       </div>

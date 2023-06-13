@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { PORTFOLIO } from "utils/consts";
+import type { MenuStateProps } from "components/nav/nav";
 import { createJSONStorage, persist } from "zustand/middleware";
-export type MenuStateProps = 'open' | 'closed' | 'loading';
 
 interface State {
     active: string,

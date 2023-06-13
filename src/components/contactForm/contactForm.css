@@ -1,0 +1,43 @@
+.contact-form-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.contact-form {
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 2px solid gray;
+    margin: 1rem 1.5rem;
+}
+
+.form-item input {
+    width: 35%;
+    height: 1.5rem;
+}
+
+.dark-bg .form-item textarea,
+.dark-bg .form-item input {
+    background-color: black;
+    color: white;
+}
+
+.form-item textarea {
+    width: 50%;
+    height: 10rem;
+}
+
+.submit-button {
+    margin: 2rem 0 1rem;
+    background-color: white;
+}
+
+.submit-button:hover {
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.light-bg .submit-button {
+    color: white;
+    background-color: var(--dark-bg-color);
+}

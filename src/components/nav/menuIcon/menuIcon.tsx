@@ -1,5 +1,6 @@
-import { useStore, MenuStateProps } from "store/store";
+import { useStore } from "store/store";
 import { OPEN, CLOSED } from "utils/consts";
+import { MenuStateProps } from "../nav";
 import "./menuIcon.css"
 
 interface MenuProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

@@ -13,6 +13,7 @@ import { PORTFOLIO, RESUME, LOADING } from "utils/consts";
 import MobileMenu from "components/mobileMenu";
 import { useEffect } from "react";
 import ScrollButton from "components/scrollButton/scrollButton";
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 
 const router = createBrowserRouter(
@@ -41,9 +42,10 @@ function App() {
       <div className={darkMode ? "dark-bg" : "light-bg"}>
         <RouterProvider router={router} />
         <Footer />
+        {menuState !== LOADING && <MobileMenu />}
       </div>
-      {menuState !== LOADING && <MobileMenu />}
       <ScrollButton />
+      <Toaster />
     </>
   );
 }

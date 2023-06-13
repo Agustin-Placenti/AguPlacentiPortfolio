@@ -15,7 +15,7 @@ export default function MobileMenu() {
 
   return (
     <div className={menuState} onAnimationEnd={handleAnimationEnd}>
-      {navbarPages.map((page) => <NavbarMobileLink url={page.url} text={page.text} />)}
+      {navbarPages.map((page, index) => <NavbarMobileLink url={page.url} text={page.text} key={index}/>)}
     </div>
   );
 }

@@ -6,8 +6,9 @@ import { useEffect, useState } from "react";
 import MenuIcon from "./menuIcon/menuIcon";
 import NavbarLink from "./navbarLink/navbarLink";
 import { navbarPages } from "utils/navbarPages";
-import type { MenuStateProps } from "store/store";
 import DarkModeButton from "./darkModeButton/darkModeButton";
+
+export type MenuStateProps = 'open' | 'closed' | 'loading';
 
 type NavProps = {
   menuState: MenuStateProps;
@@ -42,7 +43,7 @@ export default function Nav({ menuState }: NavProps) {
         <DarkModeButton />
       </span>
       <span className={"right-nav"}>
-        {navbarPages.map((page) => <NavbarLink url={page.url} text={page.text} />)}
+        {navbarPages.map((page, index) => <NavbarLink url={page.url} text={page.text} key={index}/>)}
         <MenuIcon className={"menu-icon"} tabIndex={0} menuState={menuState} />
       </span>
     </div>
