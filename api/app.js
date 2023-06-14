@@ -3,11 +3,14 @@ import dotenv from "dotenv";
 import cors from "cors";
 import router from "./routes/routes.js"
 import connectToDatabase from "./db_connection/dbConnection.js";
+import bodyParser from "body-parser";
 
 connectToDatabase();
 
 dotenv.config();
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors());
 app.use(router)
 

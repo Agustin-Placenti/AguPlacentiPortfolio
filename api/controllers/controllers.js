@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,
   },
+  secure: true
 });
 
 export const downloadPDF = (req, res) => {
@@ -21,7 +22,6 @@ export const downloadPDF = (req, res) => {
 };
 
 export const sendEmail = (req, res) => {
-  console.log(req.body);
   const { emailFrom, subject, message } = req.body;
 
   const mailOptions = {

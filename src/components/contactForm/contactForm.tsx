@@ -34,7 +34,7 @@ const ContactForm = () => {
         setSubject("");
         setMessage("");
       } else {
-        toast.error("Error sendin E-mail");
+        toast.error("Error sending E-mail");
       }
     } catch (error) {
       toast.error(`Network error ${error}`);
